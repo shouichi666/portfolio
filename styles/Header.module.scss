@@ -1,0 +1,34 @@
+.header {
+  align-items: flex-end;
+  // background-color: black;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navButton {
+  position: relative;
+  margin: 0 10px;
+  transition: 0.3s;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-color: white;
+    width: 0%;
+    height: 1px;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+      transition: 0.3s;
+    }
+  }
+}
