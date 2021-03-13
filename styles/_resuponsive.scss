@@ -1,0 +1,20 @@
+//PC最小幅とSP最大幅を変数に入れる
+$media-pc: 1200px;
+$media-tb: 789px;
+$media-sp: 450px;
+
+@mixin pc {
+  @media only screen and (min-width: $media-pc) {
+    @content;
+  }
+}
+@mixin tb {
+  @media only screen and (max-width: $media-tb) {
+    @content;
+  }
+}
+@mixin sp {
+  @media only screen and (max-width: $media-sp) {
+    @content;
+  }
+}
