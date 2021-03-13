@@ -16,7 +16,10 @@ const Home = () => {
   const [scroll, setScroll] = useState(1);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
-
+  useEffect(() => {
+    const h = window.innerHeight;
+    dispatch({ type: "SET_WINDOW_HEIGHT", height: h });
+  }, []);
   const jumpWork = () => {
     const windowHeight = window.innerHeight;
     scrollTo({ top: windowHeight, left: 0, behavior: "smooth" });

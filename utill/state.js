@@ -6,6 +6,7 @@ export const AppContext = createContext();
 const initialState = {
   item: [],
   id: "",
+  height: 0,
 };
 
 const AppWapprer = ({ children }) => {

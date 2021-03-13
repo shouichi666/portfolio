@@ -5,6 +5,7 @@ import data from "../../data.js";
 // import Link from "next/link";
 import Typing from "../../components/Typing";
 import Button from "../../components/Button";
+import ImgBox from "../../components/ImgBox.jsx";
 
 const workId = () => {
   const router = useRouter();
@@ -31,7 +32,6 @@ const workId = () => {
     "#b8b8b8",
     "#b7ff42",
   ];
-  console.log(scroll / dom);
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -52,6 +52,9 @@ const workId = () => {
 
   const backColorStyle = {
     backgroundColor: backColor[index],
+  };
+  const scrollStyle = {
+    transform: `scale(${(scroll / dom) * 0.3},${(scroll / dom) * 0.3} )`,
   };
   const onClick = (e) => {
     setImgNumber(0);
@@ -121,9 +124,9 @@ const workId = () => {
       <section className='wordId__datasContents'>
         <div
           className='wordId__datasContents--wrapper'
-          style={{
-            opacity: `${(scroll / dom) * 0.11}`,
-          }}
+          // style={{
+          //   opacity: `${scroll / dom}`,
+          // }}
           ref={scrollAnimation}
         >
           <ul className='wordId__datasContents--toolsBox'>
@@ -156,16 +159,22 @@ const workId = () => {
             <li key={i}></li>;
           } else {
             return (
-              <div className='wordId__others--imgOuter' key={i}>
-                <img
-                  src={`/images/${d.imgs[0]}`}
-                  alt=''
-                  onClick={onClick}
-                  id={i}
-                  name={d.title}
-                  className='wordId__others--img'
-                />
-              </div>
+              <ImgBox
+                onClick={onClick}
+                id={i}
+                name={d.title}
+                src={`/images/${d.imgs[0]}`}
+              />
+              // <div className='wordId__others--imgOuter' key={i}>
+              //   <img
+              //     src={`/images/${d.imgs[0]}`}
+              //     alt=''
+              //     onClick={onClick}
+              //     id={i}
+              //     name={d.title}
+              //     className='wordId__others--img'
+              //   />
+              // </div>
             );
           }
         })}
