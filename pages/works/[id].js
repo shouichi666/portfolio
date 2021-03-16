@@ -164,6 +164,7 @@ const workId = () => {
                 id={i}
                 name={d.title}
                 src={`/images/${d.imgs[0]}`}
+                key={i}
               />
               // <div className='wordId__others--imgOuter' key={i}>
               //   <img

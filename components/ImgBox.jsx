@@ -27,7 +27,7 @@ const ImgBox = (props) => {
         id={props.id}
         name={props.name}
         className={
-          dom < scroll + state.height * 0.6 ? "wordId__others--img" : "hidden"
+          dom < scroll + state.height * 0.9 ? "wordId__others--img" : "hidden"
         }
         ref={ref}
       />
