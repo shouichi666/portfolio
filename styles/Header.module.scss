@@ -9,6 +9,7 @@
   top: 0;
   width: 100%;
   z-index: 100;
+  transition: 0.1s;
 
   &__nav {
     display: flex;
@@ -37,4 +38,12 @@
       color: #24292e;
     }
   }
+}
+
+.headerHidden {
+  opacity: 0;
+}
+
+.headerDisplay {
+  opacity: 1;
 }

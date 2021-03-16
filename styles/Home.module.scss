@@ -154,8 +154,8 @@
 }
 
 .grid {
-  // background-color: black;
-  margin: 100vh 0 0 0;
+  max-width: 1200px;
+  margin: 100vh auto 0 auto;
   position: relative;
   z-index: 10;
   display: grid;
