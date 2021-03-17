@@ -10,6 +10,8 @@ import ImgBox from "../../components/ImgBox.jsx";
 const workId = () => {
   const router = useRouter();
   const scrollAnimation = useRef();
+  const other = useRef();
+  const [stop, setStop] = useState();
   const [dom, setDom] = useState();
   const { state, dispatch } = useContext(AppContext);
   const [imgNumber, setImgNumber] = useState(0);
@@ -66,8 +68,13 @@ const workId = () => {
 
   useEffect(() => {
     const el = scrollAnimation.current;
+    const stopElement = other.current;
     setDom(el.getBoundingClientRect().y);
+    setStop(stopElement.getBoundingClientRect().top);
   }, []);
+
+  console.log(scroll);
+  console.log(stop - state.height);
   return (
     <div className='wordId'>
       <section style={backColorStyle} className={`wordId__topView`}>
@@ -147,13 +154,18 @@ const workId = () => {
               url={url}
               onClick={() => console.log("button click")}
               color={backColor[index]}
-              style={{ transform: `translateY(${scroll / 2.3}px)` }}
+              style={
+                scroll > stop - state.height
+                  ? {
+                    position: "absolute", bottom:"-120px",right:"0px"  }
+                  : { transform: `translateY(${scroll / 2.3}px)` }
+              }
             />
           </div>
         </div>
       </section>
 
-      <section className='wordId__others'>
+      <section className='wordId__others' ref={other}>
         {data.map((d, i) => {
           if (i === pullData.id - 1) {
             <li key={i}></li>;
