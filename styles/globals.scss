@@ -92,6 +92,9 @@ footer {
 .link:nth-child(7):hover .hover {
   background-color: $mahara_color;
 }
+.link:nth-child(7):hover .hover {
+  background-color: $flex_color;
+}
 .link:hover .data_title {
   transition: 0.3s;
 }
