@@ -64,7 +64,7 @@ const datas = [
   {
     id: 8,
     title: "Flex Genereter",
-    url: "",
+    url: "https://shouichi666.github.io/FlexGenereter/",
     imgs: ["flexgenereter"],
     tools: ["React", "Redux","TypeScript"],
     discription:
