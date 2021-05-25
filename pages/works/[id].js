@@ -33,6 +33,7 @@ const workId = () => {
     "#e01563",
     "#b8b8b8",
     "#b7ff42",
+    "#4687de",
   ];
 
   useEffect(() => {
@@ -73,8 +74,6 @@ const workId = () => {
     setStop(stopElement.getBoundingClientRect().top);
   }, []);
 
-  console.log(scroll);
-  console.log(stop - state.height);
   return (
     <div className='wordId'>
       <section style={backColorStyle} className={`wordId__topView`}>
@@ -131,9 +130,6 @@ const workId = () => {
       <section className='wordId__datasContents'>
         <div
           className='wordId__datasContents--wrapper'
-          // style={{
-          //   opacity: `${scroll / dom}`,
-          // }}
           ref={scrollAnimation}
         >
           <ul className='wordId__datasContents--toolsBox'>
@@ -178,16 +174,6 @@ const workId = () => {
                 src={`/images/${d.imgs[0]}`}
                 key={i}
               />
-              // <div className='wordId__others--imgOuter' key={i}>
-              //   <img
-              //     src={`/images/${d.imgs[0]}`}
-              //     alt=''
-              //     onClick={onClick}
-              //     id={i}
-              //     name={d.title}
-              //     className='wordId__others--img'
-              //   />
-              // </div>
             );
           }
         })}

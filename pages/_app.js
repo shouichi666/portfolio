@@ -5,13 +5,6 @@ import { db } from "../firebase/index.js";
 import AppWapprer, { AppContext } from "../utill/state.js";
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    db.ref("names").on("value", (data) => {
-      console.log(data.val());
-    });
-
-
-  }, []);
 
   return (
     <AppWapprer>
