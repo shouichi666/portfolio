@@ -61,6 +61,15 @@ const datas = [
     discription:
       "デイトラの教材を購入し作成しました。Smart Custom Filds, Contact Form 7,Breadcrumb Navxtを使用しました。",
   },
+  {
+    id: 8,
+    title: "Flex Genereter",
+    url: "",
+    imgs: ["flexgenereter"],
+    tools: ["React", "Redux","TypeScript"],
+    discription:
+      ""
+  },
 ];
 
 export default datas;
