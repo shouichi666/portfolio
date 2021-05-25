@@ -123,6 +123,10 @@ footer {
   color: $mahara_color;
   text-shadow: 0px 1px 14px $mahara_color;
 }
+.link:nth-child(8):hover .data_title {
+  color: $flex_color;
+  text-shadow: 0px 1px 14px $flex_color;
+}
 
 @keyframes gradient {
   0% {

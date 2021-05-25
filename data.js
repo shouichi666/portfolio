@@ -54,17 +54,8 @@ const datas = [
   },
   {
     id: 7,
-    title: "教材マハーバーラタ",
-    url: "",
-    imgs: ["maha.png"],
-    tools: ["HTML", "Sass", "jQuery", "WordPress"],
-    discription:
-      "デイトラの教材を購入し作成しました。Smart Custom Filds, Contact Form 7,Breadcrumb Navxtを使用しました。",
-  },
-  {
-    id: 8,
     title: "Flex Genereter",
-    url: "https://shouichi666.github.io/FlexGenereter/",
+    url: "https://shouichi666.github.io/FlexGenereter/",  
     imgs: ["flexgenereter.jpg"],
     tools: ["React", "Redux","TypeScript"],
     discription:
